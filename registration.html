@@ -54,34 +54,120 @@
                         <div class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email *" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
-                                </div>
-    
-    
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password *" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Mall Name *" value="" />
-                                </div>
-                                <input type="submit" class="btnRegister"  value="Register"/>
-                            </div>
-                        </div>
-                    </div>
+								
+								<form name="myForm" method="post" action="registration.html" onsubmit="return validateForm()">
+
+                    <script>
+                    function validateForm() 
+                    {
+                     var First_name=document.myForm.First_name.value;
+                     var Last_Name=document.myForm.Last_Name.value;
+                     var phone=document.myForm.phone.value;
+                     var Email=document.myForm.Email.value;
+                     var fpassword=document.myForm.fpassword.value;  
+                     var spassword=document.myForm.spassword.value;  
+                     var mall_name=document.myForm.mall_name.value;  
+                      
+                      if (First_name== null || First_name=="") 
+                     {
+                        alert("please fill First Name ");
+                        document.myForm.First_name.focus() ;
+                        return false;
+                    }
+                        else if(name== null || Last_Name=="")
+                        {
+                        alert("please fill last Name ");
+                        document.myForm.Last_Name.focus() ;
+                        return false;
+                        
+                        }
+                        else if(name== null || Email=="") 
+                    {
+                        alert("please fill Email");
+                        document.myForm.Email.focus() ;
+                        return false;
+                        }
+                        else if(name== null || phone=="") 
+                        
+                      {
+                        alert("please fill phone");
+                        document.myForm.phone.focus() ;
+                        return false;
+                        
+                      }
+                      
+                      
+                      
+                      else if(name== null || fpassword=="") 
+                        
+                      {
+                        alert("please fill password");
+                        document.myForm.fpassword.focus() ;
+                        return false;
+                    
+                      }
+                      
+                     else if(name== null || spassword=="") 
+                        
+                      {
+                        alert("please fill comfirm password");
+                        document.myForm.spassword.focus() ;
+                        return false;
+                      }
+                      
+                      else if(fpassword!= spassword)  
+                      {   
+                        alert("Passwords did not match");
+                        document.myForm.fpassword.focus();
+                        return false;
+                      } 
+                    
+                      else if (name== null || mall_name=="") 
+                        
+                      {
+                        alert("please fill mall name");
+                        document.myForm.mall_name.focus() ;
+                        return false;
+                      } 
+                    }
+                    
+                    </script>
+								
+								
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" name="First_name"/>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Last Name *" value="" name="Last_Name" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" placeholder="Email *" value="" name="Email"/>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="type" maxlength="10"  class="form-control" placeholder="Phone *" value="" name="phone"  pattern="[1-9]{1}[0-9]{9}" title="Enter 10 digit mobile number"  required>
+
+                                                        
+                                                        <script src="phonecheck.js"></script>
+                                                    </div>
+                        
+                        
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                    
+                                                        <input type="password" class="form-control" placeholder="Password *" value="" name="fpassword" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control" placeholder="Confirm Password *" value="" name="spassword" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Mall Name *" value="" name="mall_name" />
+                                                    </div>
+                                                    <input type="submit"   class="btnRegister"  value="Register"/>
+                                                    </form>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
     
                     
                     <div class="tab-pane fade show" id="shopowner" role="tabpanel" aria-labelledby="shopowner-tab">
@@ -89,55 +175,229 @@
                     <div class="row register-form">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
-                            </div>
-
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Shop Name *" value="" />
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Shop Address *" value="" />
-                            </div>
-
-                            <input type="submit" class="btnRegister"  value="Register"/>
-                        </div>
-                    </div>
-                </div>
+							
+							<form name="ShopOwner" method="post" action="registration.html" onsubmit="return validateForm1()">
+                                            <script>
+                                            function validateForm1()
+                                             {
+                                             var First_name1=document.ShopOwner.First_name1.value;
+                                             var Last_Name1=document.ShopOwner.Last_Name1.value;
+                                             var phone1=document.ShopOwner.phone1.value;
+                                             var Email1=document.ShopOwner.Email1.value;
+                                             var fpassword1=document.ShopOwner.fpassword1.value;  
+                                             var spassword1=document.ShopOwner.spassword1.value;  
+                                             var shop_name1=document.ShopOwner.shop_name1.value; 
+                                             var Shop_Address1=document.ShopOwner.Shop_Address1.value; 
+                                              
+                                              if (First_name1== null || First_name1=="") {
+                                                alert("please fill First Name ");
+                                                document.ShopOwner.First_name1.focus() ;
+                                                return false;
+                                                }
+                                                else if(name== null || Last_Name1=="") {
+                                                alert("please fill last Name ");
+                                                document.ShopOwner.Last_Name1.focus() ;
+                                                return false;
+                                                
+                                                }else if(name== null || Email1=="") 
+                                                {
+                                                alert("please fill Email ");
+                                                document.ShopOwner.Email.focus() ;
+                                                return false;
+                                                }else if(name== null || phone1=="") 
+                                                
+                                              {
+                                                alert("please fill phone");
+                                                document.ShopOwner.phone1.focus() ;
+                                                return false;
+                                                
+                                              }
+                                              
+                                              
+                                              
+                                              else if(name== null || fpassword1=="") 
+                                                
+                                              {
+                                                alert("please fill password");
+                                                document.ShopOwner.fpassword1.focus() ;
+                                                return false;
+                                                
+                                                
+                                              }
+                                              
+                                             else if(name== null || spassword1=="") 
+                                                
+                                              {
+                                                alert("please fill comfirm password");
+                                                document.ShopOwner.spassword1.focus() ;
+                                                return false;
+                                              }
+                                              
+                                              else if(fpassword1!= spassword1)  
+                                              {   
+                                                alert("Passwords did not match");
+                                                document.ShopOwner.fpassword1.focus();
+                                                return false;
+                                              } 
+                                              
+                                              
+                                              
+                                              
+                                              else if (name== null || shop_name1=="") 
+                                                
+                                              {
+                                                alert("please fill shop name");
+                                                document.ShopOwner.shop_name1.focus() ;
+                                                return false;
+                                              } 
+                                              
+                                              
+                                              else if (name== null || Shop_Address1=="") 
+                                                
+                                              {
+                                                alert("please fill shop address");
+                                                document.ShopOwner.Shop_Address1.focus() ;
+                                                return false;
+                                              } 
+                                              
+                                             }
+                                              
+                                            
+                                            
+                                            </script> 
+							
+                                
+                                                                            <input type="text" class="form-control" placeholder="First Name *" value="" name="First_name1"  />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" placeholder="Last Name *" value="" name="Last_Name1"  />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="email" class="form-control" placeholder="Email *" value=""  name="Email1" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text" maxlength="10"  class="form-control" placeholder="Phone *" value="" name="phone1" pattern="[1-9]{1}[0-9]{9}" title="Enter 10 digit mobile number"  required />
+                                                                            
+                                                                        </div>
+                                            
+                                            
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <input type="password" class="form-control" placeholder="Password *" value="" name="fpassword1" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="password" class="form-control" placeholder="Confirm Password *" value="" name="spassword1"/>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" placeholder="Shop Name *" value="" name="shop_name1"/>
+                                                                        </div>
+                                            
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" placeholder="Shop Address *" value="" name="Shop_Address1"/>
+                                                                        </div>
+                                            
+                                                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                                                        </form>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
                     <div class="tab-pane fade show" id="customer" role="tabpanel" aria-labelledby="customer-tab">
                         <h3 class="register-heading">Register as Customer</h3>
                         <div class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+								<form name="Customer" method="post" action="registration.html" onsubmit="return validateFormcustomer()">   
+                                                            <script>
+                                                                function validateFormcustomer()
+                                                                 {
+                                                                 var First_namecustomer=document.Customer.First_namecustomer.value;
+                                                                 var Last_Namecustomer=document.Customer.Last_Namecustomer.value;
+                                                                 var phonecustomer=document.Customer.phonecustomer.value;
+                                                                 var Emailcustomer=document.Customer.Emailcustomer.value;
+                                                                 var fpasswordcustomer=document.Customer.fpasswordcustomer.value;  
+                                                                 var spasswordcustomer=document.Customer.spasswordcustomer.value;  
+                                                                 var Residential_Addresscustomer=document.Customer.Residential_Addresscustomer.value; 
+                                                                  
+                                                                  if (First_namecustomer== null || First_namecustomer=="") {
+                                                                    alert("please fill First Name ");
+                                                                    document.Customer.First_namecustomer.focus() ;
+                                                                    return false;
+                                                                    }
+                                                                    else if(Last_Namecustomer== null || Last_Namecustomer=="") {
+                                                                    alert("please fill last Name ");
+                                                                    document.Customer.Last_Namecustomer.focus() ;
+                                                                    return false;
+                                                                    
+                                                                    }else if(name== null || Emailcustomer=="") 
+                                                                    {
+                                                                    alert("please fill Email ");
+                                                                    document.Customer.Emailcustomer.focus() ;
+                                                                    return false;
+                                                                    }else if(name== null || phonecustomer=="") 
+                                                                    
+                                                                  {
+                                                                    alert("please fill phone");
+                                                                    document.Customer.phonecustomer.focus() ;
+                                                                    return false;
+                                                                    
+                                                                  }
+                                                                  
+                                                                  
+                                                                  
+                                                                  else if(name== null || fpasswordcustomer=="") 
+                                                                    
+                                                                  {
+                                                                    alert("please fill password");
+                                                                    document.Customer.fpasswordcustomer.focus() ;
+                                                                    return false;
+                                                                    
+                                                                    
+                                                                  }
+                                                                  
+                                                                 else if(name== null || spasswordcustomer=="") 
+                                                                    
+                                                                  {
+                                                                    alert("please fill comfirm password");
+                                                                    document.Customer.spasswordcustomer.focus() ;
+                                                                    return false;
+                                                                  }
+                                                                  
+                                                                  else if(fpasswordcustomer!= spasswordcustomer)  
+                                                                  {   
+                                                                    alert("Passwords did not match");
+                                                                    document.Customer.fpasswordcustomer.focus();
+                                                                    return false;
+                                                                  } 
+                                                                  
+                                                                            
+                                                                  else if (name== null || Residential_Addresscustomer=="") 
+                                                                    
+                                                                  {
+                                                                    alert("please fill Residential address");
+                                                                    document.Customer.Residential_Addresscustomer.focus() ;
+                                                                    return false;
+                                                                  } 
+                                                                  
+                                                                 }
+                                                                  
+                                                                
+                                                                
+                                                                </script> 
+								
+								
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" name="First_namecustomer"/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" name="Last_Namecustomer"/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    <input type="password" class="form-control" placeholder="Password *" value="" name="fpasswordcustomer" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" name="spasswordcustomer" />
                                 </div>
                                 <!-- <div class="form-group">
                                     <div class="maxl">
@@ -154,16 +414,20 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                    <input type="email" class="form-control" placeholder="Your Email *" value="" name="Emailcustomer"/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                    <input type="text" maxlength="10"  class="form-control" placeholder="Your Phone *" value="" name="phonecustomer"  pattern="[1-9]{1}[0-9]{9}" title="Enter 10 digit mobile number"  required />
+                                    <script src="phonecheck.js"></script>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Residential Address *" value="" />
+                                    <input type="text" class="form-control" placeholder="Residential Address *" value="" name="Residential_Addresscustomer" />
                                 </div>
                                 <input type="submit" class="btnRegister"  value="Register"/>
+                            </form>
+								</div>
+                           
                             </div>
                         </div>
                     </div>
